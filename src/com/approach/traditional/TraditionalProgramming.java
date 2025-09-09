@@ -5,7 +5,9 @@ import java.util.List;
 
 public class TraditionalProgramming {
     public static void main(String[] args) {
-        printAllNumberInList(Arrays.asList(1,2,3,4,5,6,7,8));
+//        printAllNumberInList(Arrays.asList(1,2,3,4,5,6,7,8));
+
+        printEvenNumbersInList(Arrays.asList(1,2,3,4,5,6,7,8));
     }
 
     // Print Each Item in List
@@ -14,4 +16,14 @@ public class TraditionalProgramming {
             System.out.println(item);
         }
     }
+
+    // print Even Numbers in List
+    private static void printEvenNumbersInList(List<Integer> list) {
+        for (int number : list) {
+            if (number % 2 == 0) {
+                System.out.println(number);
+            }
+        }
+    }
+
 }
