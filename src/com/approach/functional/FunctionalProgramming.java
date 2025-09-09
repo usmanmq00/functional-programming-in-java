@@ -11,16 +11,12 @@ public class FunctionalProgramming {
 
     private static void printEvenNumbersInList(List<Integer> list) {
         list.stream().
-                filter(FunctionalProgramming::isEven).
-                forEach(System.out::println);
+                filter(number -> number%2==0).    // Expects a Predicate
+                forEach(System.out::println);  // Expects a Consumer
     }
 
     private static void printAllNumbersInList(List<Integer> list) {
         list.stream().forEach(System.out::println);   // System.out has a static method println
-    }
-
-    private static boolean isEven(int number) {
-        return number % 2 == 0;
     }
 
 }

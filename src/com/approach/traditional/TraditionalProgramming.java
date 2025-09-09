@@ -6,7 +6,6 @@ import java.util.List;
 public class TraditionalProgramming {
     public static void main(String[] args) {
 //        printAllNumberInList(Arrays.asList(1,2,3,4,5,6,7,8));
-
         printEvenNumbersInList(Arrays.asList(1,2,3,4,5,6,7,8));
     }
 
