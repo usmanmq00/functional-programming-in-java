@@ -11,7 +11,14 @@ public class FunctionalProgramming {
 //        printAllCourses(List.of("Spring", "Spring Boot", "AWS", "Docker", "Azure"));
 //        printCoursesContainingSpring(List.of("Spring", "Spring Boot", "AWS", "Docker", "Azure"));
 //        printCoursesHavingFourLetters(List.of("Spring", "Spring Boot", "AWS", "Docker", "Azure"));
-        printSquareOfEvenNumbers(Arrays.asList(1,2,3,4,5,6,7,8));
+//        printSquareOfEvenNumbers(Arrays.asList(1,2,3,4,5,6,7,8));
+        printCharactersInEachItemOfList(List.of("Spring", "Spring Boot", "AWS", "Docker", "Azure"));
+    }
+
+    private static void printCharactersInEachItemOfList(List<String> courses) {
+        courses.stream()
+                .map(String::length)
+                .forEach(System.out::println);
     }
 
     private static void printSquareOfEvenNumbers(List<Integer> list) {
