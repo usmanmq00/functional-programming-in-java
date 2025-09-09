@@ -8,7 +8,14 @@ public class FunctionalProgramming {
 //        printAllNumbersInList(Arrays.asList(1,2,3,4,5,6,7,8));
 //        printEvenNumbersInList(Arrays.asList(1,2,3,4,5,6,7,8));
 //        printOddNumbersInList(Arrays.asList(1,2,3,4,5,6,7,8));
-        printAllCourses(List.of("Spring", "Spring Boot", "AWS", "Docker", "Azure"));
+//        printAllCourses(List.of("Spring", "Spring Boot", "AWS", "Docker", "Azure"));
+        printCoursesContainingSpring(List.of("Spring", "Spring Boot", "AWS", "Docker", "Azure"));
+    }
+
+    private static void printCoursesContainingSpring(List<String> courses) {
+        courses.stream()
+                .filter(course -> course.contains("Spring"))
+                .forEach(System.out::println);
     }
 
     private static void printAllCourses(List<String> courses) {
