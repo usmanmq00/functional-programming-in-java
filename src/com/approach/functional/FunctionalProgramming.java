@@ -6,7 +6,14 @@ import java.util.List;
 public class FunctionalProgramming {
     public static void main(String[] args) {
 //        printAllNumbersInList(Arrays.asList(1,2,3,4,5,6,7,8));
-        printEvenNumbersInList(Arrays.asList(1,2,3,4,5,6,7,8));
+//        printEvenNumbersInList(Arrays.asList(1,2,3,4,5,6,7,8));
+        printOddNumbersInList(Arrays.asList(1,2,3,4,5,6,7,8));
+    }
+
+    private static void printOddNumbersInList(List<Integer> list) {
+        list.stream().
+                filter(number -> number%2!=0).
+                forEach(System.out::println);
     }
 
     private static void printEvenNumbersInList(List<Integer> list) {
