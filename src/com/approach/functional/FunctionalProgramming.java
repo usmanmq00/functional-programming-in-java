@@ -7,7 +7,13 @@ public class FunctionalProgramming {
     public static void main(String[] args) {
 //        printAllNumbersInList(Arrays.asList(1,2,3,4,5,6,7,8));
 //        printEvenNumbersInList(Arrays.asList(1,2,3,4,5,6,7,8));
-        printOddNumbersInList(Arrays.asList(1,2,3,4,5,6,7,8));
+//        printOddNumbersInList(Arrays.asList(1,2,3,4,5,6,7,8));
+        printAllCourses(List.of("Spring", "Spring Boot", "AWS", "Docker", "Azure"));
+    }
+
+    private static void printAllCourses(List<String> courses) {
+        courses.stream().
+                forEach(System.out::println);
     }
 
     private static void printOddNumbersInList(List<Integer> list) {
