@@ -10,7 +10,15 @@ public class FunctionalProgramming {
 //        printOddNumbersInList(Arrays.asList(1,2,3,4,5,6,7,8));
 //        printAllCourses(List.of("Spring", "Spring Boot", "AWS", "Docker", "Azure"));
 //        printCoursesContainingSpring(List.of("Spring", "Spring Boot", "AWS", "Docker", "Azure"));
-        printCoursesHavingFourLetters(List.of("Spring", "Spring Boot", "AWS", "Docker", "Azure"));
+//        printCoursesHavingFourLetters(List.of("Spring", "Spring Boot", "AWS", "Docker", "Azure"));
+        printSquareOfEvenNumbers(Arrays.asList(1,2,3,4,5,6,7,8));
+    }
+
+    private static void printSquareOfEvenNumbers(List<Integer> list) {
+        list.stream()
+                .filter(number -> number%2==0)
+                .map(number -> number*number)   // Expects a Function Interface
+                .forEach(System.out::println);
     }
 
     private static void printCoursesHavingFourLetters(List<String> courses) {
