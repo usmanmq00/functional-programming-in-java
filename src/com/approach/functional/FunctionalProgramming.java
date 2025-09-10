@@ -16,11 +16,17 @@ public class FunctionalProgramming {
 //        printSquareOfEvenNumbers(Arrays.asList(1,2,3,4,5,6,7,8));
 //        printCharactersInEachItemOfList(List.of("Spring", "Spring Boot", "AWS", "Docker", "Azure"));
 //        printCoursesStartWithS(List.of("Spring", "Spring Boot", "AWS", "Docker", "Azure"));
+        int sum = printSumOfAllElementsInList(Arrays.asList(1,2,3,4,5,6,7,8));
+        System.out.println("Sum is : " + sum);
 
         Optional<String> fruit = Optional.of("Orange");
         Optional<String> empty = Optional.empty();
 
-        System.out.println("Value of Fruit is : " + fruit.get() + " and Value of Empty is : " + empty) ;
+//        System.out.println("Value of Fruit is : " + fruit.get() + " and Value of Empty is : " + empty) ;
+    }
+
+    private static int printSumOfAllElementsInList(List<Integer> list) {
+        return list.stream().reduce(0, Integer::sum);  // Expects a binary Operator
     }
 
     private static void printCoursesStartWithS(List<String> courses) {
