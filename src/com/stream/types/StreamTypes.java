@@ -14,7 +14,17 @@ public class StreamTypes {
 //        printStreamFromStreamOf(Stream.of("Apple", "Banana", "Cherry"));
 
         // Array.stream()
-        printStreamFromPrimitiveArray();
+//        printStreamFromPrimitiveArray();
+
+        // Stream.builder()
+        printStreamBuildManually();
+    }
+
+    private static void printStreamBuildManually() {
+        Stream.Builder<String> fruits = Stream.builder();
+        fruits.add("Apple").add("Banana").add("Cherry");
+        Stream<String> stream = fruits.build();
+        stream.forEach(System.out::println);
     }
 
     private static void printStreamFromPrimitiveArray() {
