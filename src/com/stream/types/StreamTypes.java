@@ -17,7 +17,15 @@ public class StreamTypes {
 //        printStreamFromPrimitiveArray();
 
         // Stream.builder()
-        printStreamBuildManually();
+//        printStreamBuildManually();
+
+        // Stream.generate()
+        printStreamFromGenerate();
+
+    }
+
+    private static void printStreamFromGenerate() {
+        Stream.generate(Math::random).limit(5).forEach(System.out::println);  // Expects a Supplier Interface
     }
 
     private static void printStreamBuildManually() {
