@@ -15,7 +15,12 @@ public class FunctionalProgramming {
 //        printCoursesHavingFourLetters(List.of("Spring", "Spring Boot", "AWS", "Docker", "Azure"));
 //        printSquareOfEvenNumbers(Arrays.asList(1,2,3,4,5,6,7,8));
 //        printCharactersInEachItemOfList(List.of("Spring", "Spring Boot", "AWS", "Docker", "Azure"));
-        printCoursesStartWithS(List.of("Spring", "Spring Boot", "AWS", "Docker", "Azure"));
+//        printCoursesStartWithS(List.of("Spring", "Spring Boot", "AWS", "Docker", "Azure"));
+
+        Optional<String> fruit = Optional.of("Orange");
+        Optional<String> empty = Optional.empty();
+
+        System.out.println("Value of Fruit is : " + fruit.get() + " and Value of Empty is : " + empty) ;
     }
 
     private static void printCoursesStartWithS(List<String> courses) {
