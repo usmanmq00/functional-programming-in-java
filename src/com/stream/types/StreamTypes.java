@@ -1,12 +1,21 @@
 package com.stream.types;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 public class StreamTypes {
     public static void main(String[] args) {
-        printStreamFromCollectionsList(List.of(1,2,3,4,5));
-        printStreamFromCollectionsSet();
-        printStreamFromColleactionsMap();
+        // Collections
+//        printStreamFromCollectionsList(List.of(1,2,3,4,5));
+//        printStreamFromCollectionsSet();
+//        printStreamFromColleactionsMap();
+
+        // Stream.of()
+        printStreamFromStreamOf(Stream.of("Apple", "Banana", "Cherry"));
+    }
+
+    private static void printStreamFromStreamOf(Stream<String> fruits) {
+        fruits.forEach(System.out::println);
     }
 
     private static void printStreamFromColleactionsMap() {
