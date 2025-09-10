@@ -1,11 +1,15 @@
 package com.stream.types;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.*;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class StreamTypes {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // Collections
 //        printStreamFromCollectionsList(List.of(1,2,3,4,5));
 //        printStreamFromCollectionsSet();
@@ -27,7 +31,14 @@ public class StreamTypes {
 //        printStreamByApplyingFunction();
 
         // IntStream.range()
-        printStreamWithinRange();
+//        printStreamWithinRange();
+
+        // Files.lines()
+        printStreamFromFile();
+    }
+
+    private static void printStreamFromFile() throws IOException {
+       Files.lines(Paths.get("src/com/stream/types/File.txt")).forEach(System.out::println);
     }
 
     private static void printStreamWithinRange() {
