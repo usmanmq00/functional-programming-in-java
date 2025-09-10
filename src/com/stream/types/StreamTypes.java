@@ -11,7 +11,15 @@ public class StreamTypes {
 //        printStreamFromColleactionsMap();
 
         // Stream.of()
-        printStreamFromStreamOf(Stream.of("Apple", "Banana", "Cherry"));
+//        printStreamFromStreamOf(Stream.of("Apple", "Banana", "Cherry"));
+
+        // Array.stream()
+        printStreamFromPrimitiveArray();
+    }
+
+    private static void printStreamFromPrimitiveArray() {
+        int[] numbers = {1,2,3,4,5};
+        Arrays.stream(numbers).forEach(System.out::println);
     }
 
     private static void printStreamFromStreamOf(Stream<String> fruits) {
