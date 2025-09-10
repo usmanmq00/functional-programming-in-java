@@ -20,8 +20,14 @@ public class StreamTypes {
 //        printStreamBuildManually();
 
         // Stream.generate()
-        printStreamFromGenerate();
+//        printStreamFromGenerate();
 
+        // Stream.iterate()
+        printStreamByApplyingFunction();
+    }
+
+    private static void printStreamByApplyingFunction() {
+        Stream.iterate(0, n -> n + 2).limit(5).forEach(System.out::println);
     }
 
     private static void printStreamFromGenerate() {
