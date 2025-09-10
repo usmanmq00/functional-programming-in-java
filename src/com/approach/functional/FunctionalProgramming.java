@@ -2,6 +2,8 @@ package com.approach.functional;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
+import java.util.function.Predicate;
 
 public class FunctionalProgramming {
     public static void main(String[] args) {
@@ -12,7 +14,17 @@ public class FunctionalProgramming {
 //        printCoursesContainingSpring(List.of("Spring", "Spring Boot", "AWS", "Docker", "Azure"));
 //        printCoursesHavingFourLetters(List.of("Spring", "Spring Boot", "AWS", "Docker", "Azure"));
 //        printSquareOfEvenNumbers(Arrays.asList(1,2,3,4,5,6,7,8));
-        printCharactersInEachItemOfList(List.of("Spring", "Spring Boot", "AWS", "Docker", "Azure"));
+//        printCharactersInEachItemOfList(List.of("Spring", "Spring Boot", "AWS", "Docker", "Azure"));
+        printCoursesStartWithS(List.of("Spring", "Spring Boot", "AWS", "Docker", "Azure"));
+    }
+
+    private static void printCoursesStartWithS(List<String> courses) {
+        Predicate<? super String> predicate = course -> course.startsWith("S");
+
+        Optional<String> optional = courses.stream().filter(predicate).findFirst();
+
+        System.out.println("Value of Optional Class : " + optional + " & is Empty : " +
+                optional.isEmpty() + " & is Present : " + optional.isPresent() + " & Value is : " + optional.get());
     }
 
     private static void printCharactersInEachItemOfList(List<String> courses) {
