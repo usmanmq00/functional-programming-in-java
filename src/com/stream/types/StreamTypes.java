@@ -1,6 +1,7 @@
 package com.stream.types;
 
 import java.util.*;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class StreamTypes {
@@ -23,7 +24,15 @@ public class StreamTypes {
 //        printStreamFromGenerate();
 
         // Stream.iterate()
-        printStreamByApplyingFunction();
+//        printStreamByApplyingFunction();
+
+        // IntStream.range()
+        printStreamWithinRange();
+    }
+
+    private static void printStreamWithinRange() {
+        IntStream.range(1,5).forEach(System.out::println);
+        IntStream.rangeClosed(1,5).forEach(System.out::println);
     }
 
     private static void printStreamByApplyingFunction() {
